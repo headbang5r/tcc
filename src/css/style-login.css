@@ -22,7 +22,7 @@
 .home::after {
     content: '';
     position: absolute;
-    height: 89%;
+    height: 91.7%;
     width: 100%;
     background: linear-gradient(270deg, rgba(0, 0, 0, .85), rgba(0, 0, 0, .7) 25%, transparent 70%);
 
@@ -30,6 +30,7 @@
 
 .home .imagem-fundo {
     display: flex;
+    margin-top: 5pc;
     width: 40%;
     height: 50%;
 }
@@ -41,8 +42,8 @@ formulário
 .home .box {
     position: relative;
     display: flex;
-    margin-left: 20pc;
-    margin-top: 5pc;
+    margin-left: 26pc;
+    margin-top: 15pc;
     width: 380px;
     height: 430px;
     background: #1a1a1a;
@@ -291,7 +292,7 @@ formulário
 }
 
 .roda-pe .logo {
-    margin-left: 42%;
+    margin-left: 43.2%;
     margin-top: 4pc;
     width: 250px;
 }
@@ -307,7 +308,7 @@ formulário
 
 .roda-pe .subtitulo {
     display: flex;
-    margin-left: 39%;
+    margin-left: 41%;
     margin-bottom: 2pc;
     font-size: 15px;
     text-align: center;
@@ -318,7 +319,7 @@ formulário
 .roda-pe .social_media a {
     position: relative;
     display: flex;
-    margin-left: 13px;
+    margin-left: 26px;
     margin-bottom: 10px;
     justify-content: center;
     align-items: center;

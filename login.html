@@ -10,34 +10,33 @@
     <link rel="stylesheet" href="src/css/responsivo-login.css">
     <link href="https://fonts.cdnfonts.com/css/milestone-one" rel="stylesheet">
     <link href="https://fonts.cdnfonts.com/css/codygoon" rel="stylesheet">
-    <title>Login | Vanguard</title>
+    <title>Vanguard | Login</title>
     <link rel="shortcut icon" href="src/imagem/icones/escudo.png" type="image/x-icon">
 </head>
 
 <body>
     <header class="cabecalho">
-        <img class="logo" src="src/imagem/logos/VanguardLogo - titulo.png" alt="titulo da Vanguard">
+       <a href="index.html"> <img class="logo" src="src/imagem/logos/VanguardLogo - titulo.png" alt="titulo da Vanguard"> </a>
     </header>
     <main class="home">
-        <img class="imagem-fundo" src="src/imagem/teste/editado.png" alt="">
+        <img class="imagem-fundo" src="src/imagem/logos/Soldado-login.png" alt="Imagem de um cavaleiro cibernético">
 
 
         <!--formulário-->
 
         <div class="box">
             <span class="borderLine"></span>
-            <form class="formulario">
+            <form action="src/php/login.php" class="formulario" method="post">
 
                 <h1 class=" titulo">Login</h1>
                 <div class="inputBox">
-                    <input type="text" required="required">
-
-                    <span>Nome de Usuário</span>
+                    <input type="text" id="email" name="email" required="required">
+                    <span>email</span>
                     <i></i>
                 </div>
 
                 <div class="inputBox">
-                    <input type="password" required="required">
+                    <input type="password" id="senha" name="senha" required="required">
                     <span>Senha</span>
                     <i></i>
                 </div>
@@ -64,7 +63,7 @@
             <a href="facebook link" id="facebook" title="Facebook" target="_blank"><img
                     src="src/imagem/icones/Facebook.png" alt="botão do perfil do facebook da Vanguard"></a>
 
-            <a href="https://www.instagram.com/vanguard_security.oficial?igsh=MXJ3aHZwZzBkNW9hNA==" id="instagram" title="Instagram" target="_blank"><img
+            <a href="instagram link" id="instagram" title="Instagram" target="_blank"><img
                     src="src/imagem/icones/instagram.png" alt="botão do perfil do instagram da Vanguard"></a>
 
             <a href="discord" title="discord" id="discord" target="_blank"><img src="src/imagem/icones/discord.png"
@@ -109,7 +108,7 @@
     </footer>
 
     <script src="https://www.google.com/recaptcha/enterprise.js?render=KEY_ID"></script>
-
+    <script src="src/js/aviso.js"></script>
 </body>
 
 </html>

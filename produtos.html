@@ -5,37 +5,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="src/css/index-produto.css">
-    <link rel="stylesheet" href="src/css/produtos.css">
+    <link rel="stylesheet" href="src/css/style-produtos.css">
     <link rel="shortcut icon" href="src/imagem/icones/escudo.png" type="image/x-icon">
     ">
     <link href="https://fonts.cdnfonts.com/css/milestone-one" rel="stylesheet">
     <link href="https://fonts.cdnfonts.com/css/codygoon" rel="stylesheet">
-    <title>Produtos | Vanguard</title>
+    <title>Vanguard | Produtos</title>
 </head>
 
 <body>
     <header class="cabecalho">
-        <img src="src/imagem/logos/VanguardLogo - titulo.png" alt="logo da Vanguard">
+        <div class="logo">
+            <img src="src/imagem/logos/VanguardLogo - titulo.png" alt="Logo da Vanguard" />
+        </div>
+
         <button id="OpenMenu">&#9776;</button>
 
         <nav id="menu">
             <button id="CloseMenu">X</button>
             <ul class="menu">
                 <li>
-                    <a class="btn-quem-somos" href="#quem-somos" onclick="scrollToSection('quem-somos')">Quem somos</a>
+                    <a href="indexLogado.html">Página inicial</a>
 
                 </li>
                 <li>
-                    <a class="btn-parcerias" href="#parcerias">Parcerias</a>
-                </li>
-                <li>
-                    <a class="btn-avaliar" href="#avaliar">Avaliar</a>
-                </li>
-                <li>
-                    <a class="btn-servicos" href="servicos.html">Serviços</a>
-                </li>
-                <li>
-                    <a href="produtos.html" target="_blank">Produtos</a>
+                    <a href="servicos.html" target="_blank">Serviços</a>
                 </li>
                 <li>
                     <a href="cadastro.html"> Cadastrar</a>
@@ -50,38 +44,30 @@
             </ul>
         </nav>
     </header>
-
     <main class="home">
 
         <div class="slider">
-
             <div class="slides">
-
                 <!--Radio Buttons-->
                 <input type="radio" name="radio-btn" id="radio1">
                 <input type="radio" name="radio-btn" id="radio2">
                 <input type="radio" name="radio-btn" id="radio3">
                 <!--Fim Radio Buttons-->
-
-
-
                 <!-- Slide Imagens-->
-
                 <div class="slide first">
-                    <a href="#cameras">
+                    <a href="#so">
                         <img src="src/imagem/produtos/slide1.png" alt="slide 1 (propaganda de câmera de segurança)">
                     </a>
                 </div>
-
                 <div class="slide">
-                    <a href="#fechaduras">
+                    <a href="#ferramentas">
                         <img src="src/imagem/produtos/slide2.png"
                             alt="slide slide 2 (propaganda de cadeado eletrônico com leitor de cartão de acesso)">
                     </a>
                 </div>
 
                 <div class="slide">
-                    <a href="#roteadores">
+                    <a href="#antivirus">
                         <img class="terceiro-slide" src="src/imagem/produtos/slide3.png"
                             alt="slide 3 (propaganda de um roteador)">
                     </a>
@@ -109,39 +95,241 @@
 
         </div>
     </main>
-
-    <section class="compre-ja" id="comprar">
-
-        <h2 class="titulo">Nossos Produtos</h2>
-
-        <div class="caixa-pesquisa">
-            <input type="text" class="barra" placeholder="Busco por...">
-            <a class="pesquisa-btn">
-                <img src="src/imagem/icones/lupa-azul.png" alt="" class="lupa-azul" width="25px" height="25px">
-                <img src="src/imagem/icones/lupa-Branca.png" alt="" class="lupa-branca"  width="25px" height="25px">
-            </a>
-        </div>
+    <section class="compre-ja">
 
 
+
+        <form id="formBusca" action="src/php/pesquisaProdutos.php" method="GET">
+            <div class="caixa-pesquisa">
+
+                <input type="text" name="busca" class="barra" placeholder="Busco por...">
+                <button type="submit" class="pesquisa-btn">
+                    <img src="src/imagem/icones/lupa-azul.png" alt="" class="lupa-azul" width="25px" height="25px">
+                    <img src="src/imagem/icones/lupa-Branca.png" alt="" class="lupa-branca" width="25px" height="25px">
+                    </a>
+            </div>
+        </form>
+        <h1 class="titulo">Nossos Produtos</h1>
+        <!--começa o carrossel aqui-->
+
+
+        <h1 class="titulo">Sistemas Operacionais</h1>
+     
 
         <div class="lista">
+     
+            <div class="carrossel">
+                <button class="prev" onclick="prevSlide()">&#10094;</button>
+                <div class="carrossel-track"> <!--slider-->
+    
+                    <div class="cartao"> <!-- img box-->
+                        <img class="imagem" src="src/imagem/produtos/parrot.png">
+                        <div class="informacoes">
+                            <h3 class="titulo">Parrot</h3>
+                            <p class="texto"> Parrot é o sistema do qual também utilizamos e
+                                <strong>disponibilizamos</strong>
+                                para nossos
+                                clientes gratuitamente através do site <strong><a href="https://parrotsec.org/"
+                                        class="parrot" target="_blank">parrotsec.org</a></strong> do
+                                desenvolvedor Lorenzo "Palinuro" Faletra e
+                                sua equipe.
+                            </p>
+
+                            <button class="btn-plataforma">
+                                Selecione a plataforma
+
+                                <ul class="plataformas">
+                                    <li>
+                                        <a href="https://deb.parrot.sh/parrot/iso/6.0/Parrot-security-6.0_amd64.iso"
+                                            class="opcao">iso(amd64)</a>
+                                    </li>
+
+                                    <li>
+                                        <a
+                                            href="https://deb.parrot.sh/parrot/iso/5.3/Parrot-security-5.3_amd64.ova"></a>
+                                        virtualbox(amd64)<img src="src/imagens/ps4-logo.png" alt="logo playstation 4">
+                                    </li>
+
+
+                                    <li>
+                                        utm (para Apple)<img src="src/imagens/windows-logo.png" alt="logo windows">
+                                    </li>
+                                </ul>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!--outro produto-->
+                    <div class="cartao">
+                        <img class="imagem" src="src/imagem/produtos/BlackArch.png">
+
+
+                        <div class="informacoes">
+
+                            <h3 class="titulo">360 Total Security</h3>
+                            <p class="texto"> O Ap 360 é um dos produtos da intelbras que tem uma boa
+                                eficiencia quanto a
+                                velocidade da internet e com um novo sistema de segurança que a Vanguard
+                                proporciona.
+                            </p>
+
+                            <button class="btn-plataforma">
+                                Selecione a plataforma
+
+                                <ul class="plataformas">
+                                    <li>
+                                        <a href="https://deb.parrot.sh/parrot/iso/6.0/Parrot-security-6.0_amd64.iso"
+                                            class="opcao">iso(amd64)</a>
+                                    </li>
+
+                                    <li>
+                                        <a
+                                            href="https://deb.parrot.sh/parrot/iso/5.3/Parrot-security-5.3_amd64.ova"></a>
+                                        virtualbox(amd64)<img src="src/imagens/ps4-logo.png" alt="logo playstation 4">
+                                    </li>
+
+
+                                    <li>
+                                        utm (para Apple)<img src="src/imagens/windows-logo.png" alt="logo windows">
+                                    </li>
+                                </ul>
+                            </button>
+                        </div>
+                    </div>
+                    <!--outro produto-->
+
+
+
+                    <div class="cartao">
+                        <img class="imagem" src="src/imagem/produtos/backbox.png">
+                        <div class="informacoes">
+
+                            <h3 class="titulo">AP 1350 ac</h3>
+                            <p class="texto"> O Ap 1350 ac é um dos produtos da intelbras que tem um dos
+                                melhores resultados
+                                quanto a velocidade da internet e com um novo sistema de segurança que a
+                                Vanguard proporciona.
+                            </p>
+
+
+                            <button class="btn-plataforma">
+                                <ul class="plataformas">
+                                    <li>
+                                        <a href="https://deb.parrot.sh/parrot/iso/6.0/Parrot-security-6.0_amd64.iso"
+                                            class="opcao">iso(amd64)</a>
+                                    </li>
+
+                                    <li>
+                                        <a
+                                            href="https://deb.parrot.sh/parrot/iso/5.3/Parrot-security-5.3_amd64.ova"></a>
+                                        virtualbox(amd64)<img src="src/imagens/ps4-logo.png" alt="logo playstation 4">
+                                    </li>
+
+
+                                    <li>
+                                        utm (para Apple)<img src="src/imagens/windows-logo.png" alt="logo windows">
+                                    </li>
+                                </ul>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!--outro produto-->
+
+                    <div class="cartao" id="cameras">
+                        <img class="imagem" src="src/imagem/produtos/kali.png">
+
+                        <div class="informacoes">
+                            <h3 class="titulo">AP 1350 ac</h3>
+                            <p class="texto"> O Ap 1350 ac é um dos produtos da intelbras que tem um dos
+                                melhores resultados
+                                quanto a velocidade da internet e com um novo sistema de segurança que a
+                                Vanguard proporciona.
+                            </p>
+
+
+                            <button class="btn-plataforma">
+                                <ul class="plataformas">
+                                    <li>
+                                        <a href="https://deb.parrot.sh/parrot/iso/6.0/Parrot-security-6.0_amd64.iso"
+                                            class="opcao">iso(amd64)</a>
+                                    </li>
+
+                                    <li>
+                                        <a
+                                            href="https://deb.parrot.sh/parrot/iso/5.3/Parrot-security-5.3_amd64.ova"></a>
+                                        virtualbox(amd64)<img src="src/imagens/ps4-logo.png" alt="logo playstation 4">
+                                    </li>
+
+
+                                    <li>
+                                        utm (para Apple)<img src="src/imagens/windows-logo.png" alt="logo windows">
+                                    </li>
+                                </ul>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!--outro produto-->
+
+                    <div class="cartao" id="cameras">
+                        <img src="src/imagem/produtos/Samurai-Web-Testing-Framework.png" alt="">
+                        <div class="informacoes">
+
+                            <h3 class="titulo">AP 1350 ac</h3>
+                            <p class="texto"> O Ap 1350 ac é um dos produtos da intelbras que tem um dos
+                                melhores resultados
+                                quanto a velocidade da internet e com um novo sistema de segurança que a
+                                Vanguard proporciona.
+                            </p>
+
+
+                            <button class="btn-plataforma">
+                                <ul class="plataformas">
+                                    <li>
+                                        <a href="https://deb.parrot.sh/parrot/iso/6.0/Parrot-security-6.0_amd64.iso"
+                                            class="opcao">iso(amd64)</a>
+                                    </li>
+
+                                    <li>
+                                        <a
+                                            href="https://deb.parrot.sh/parrot/iso/5.3/Parrot-security-5.3_amd64.ova"></a>
+                                        virtualbox(amd64)<img src="src/imagens/ps4-logo.png" alt="logo playstation 4">
+                                    </li>
+
+
+                                    <li>
+                                        utm (para Apple)<img src="src/imagens/windows-logo.png" alt="logo windows">
+                                    </li>
+                                </ul>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <button class="next" onclick="nextSlide()">&#10095;</button>
+            </div>
+        </div>
+
+        <!--outro produto-->
+
+        <h1 class="titulo">Feramentas</h1>
+
+        <div class="lista">
+
             <div class="cartao">
 
-                <img class="imagem" src="src/imagem/produtos/so.png">
 
+                <img class="imagem" src="src/imagem/produtos/nmap.png">
                 <div class="informacoes">
-
-                    <h3 class="titulo">Parrot</h3>
-                    <p class="texto"> Parrot é o sistema do qual também utilizamos e <strong>disponibilizamos</strong>
-                        para nossos
-                        clientes gratuitamente através do site <strong><a href="https://parrotsec.org/" class="parrot"
-                                target="_blank">parrotsec.org</a></strong> do desenvolvedor Lorenzo "Palinuro" Faletra e
-                        sua equipe.
+                    <h3 class="titulo">AP 1350 ac</h3>
+                    <p class="texto"> O Ap 1350 ac é um dos produtos da intelbras que tem um dos
+                        melhores resultados
+                        quanto a velocidade da internet e com um novo sistema de segurança que a
+                        Vanguard proporciona.
                     </p>
 
-                    <button class="btn-plataforma">
-                        Selecione a plataforma
 
+                    <button class="btn-plataforma">
                         <ul class="plataformas">
                             <li>
                                 <a href="https://deb.parrot.sh/parrot/iso/6.0/Parrot-security-6.0_amd64.iso"
@@ -158,158 +346,291 @@
                                 utm (para Apple)<img src="src/imagens/windows-logo.png" alt="logo windows">
                             </li>
                         </ul>
-                </div>
-                </button>
-            </div>
-
-
-            <!--outro produto-->
-            <div class="cartao">
-
-                <img class="imagem" src="src/imagem/produtos/ap360.png">
-
-                <div class="informacoes">
-
-                    <h3 class="titulo">AP 360</h3>
-                    <p class="texto"> O Ap 360 é um dos produtos da intelbras que tem uma boa eficiencia quanto a
-                        velocidade da internet e com um novo sistema de segurança que a Vanguard proporciona.
-                    </p>
-
-                    <button class="btn-plataforma">
-                        <a href="pagamento.html" target="_blank">Compre já</a>
                     </button>
                 </div>
             </div>
-            <!--outro produto-->
+
 
             <div class="cartao">
-
-                <img class="imagem" src="src/imagem/produtos/ap1350.png">
-
+                <img class="imagem" src="src/imagem/produtos/burp-suite.png">
                 <div class="informacoes">
-
                     <h3 class="titulo">AP 1350 ac</h3>
-                    <p class="texto"> O Ap 1350 ac é um dos produtos da intelbras que tem um dos melhores resultados
-                        quanto a velocidade da internet e com um novo sistema de segurança que a Vanguard proporciona.
+                    <p class="texto"> O Ap 1350 ac é um dos produtos da intelbras que tem um dos
+                        melhores resultados
+                        quanto a velocidade da internet e com um novo sistema de segurança que a
+                        Vanguard proporciona.
                     </p>
 
 
                     <button class="btn-plataforma">
-                        <a href="pagamento.html" target="_blank">Compre já</a>
+                        <ul class="plataformas">
+                            <li>
+                                <a href="https://deb.parrot.sh/parrot/iso/6.0/Parrot-security-6.0_amd64.iso"
+                                    class="opcao">iso(amd64)</a>
+                            </li>
+
+                            <li>
+                                <a href="https://deb.parrot.sh/parrot/iso/5.3/Parrot-security-5.3_amd64.ova"></a>
+                                virtualbox(amd64)<img src="src/imagens/ps4-logo.png" alt="logo playstation 4">
+                            </li>
+
+
+                            <li>
+                                utm (para Apple)<img src="src/imagens/windows-logo.png" alt="logo windows">
+                            </li>
+                        </ul>
                     </button>
                 </div>
             </div>
 
-            <!--outro produto-->
+            <div class="cartao">
+                <img class="imagem" src="src/imagem/produtos/JTR.png">
+                <div class="informacoes">
+                    <h3 class="titulo">AP 1350 ac</h3>
+                    <p class="texto"> O Ap 1350 ac é um dos produtos da intelbras que tem um dos
+                        melhores resultados
+                        quanto a velocidade da internet e com um novo sistema de segurança que a
+                        Vanguard proporciona.
+                    </p>
 
+
+                    <button class="btn-plataforma">
+                        <ul class="plataformas">
+                            <li>
+                                <a href="https://deb.parrot.sh/parrot/iso/6.0/Parrot-security-6.0_amd64.iso"
+                                    class="opcao">iso(amd64)</a>
+                            </li>
+
+                            <li>
+                                <a href="https://deb.parrot.sh/parrot/iso/5.3/Parrot-security-5.3_amd64.ova"></a>
+                                virtualbox(amd64)<img src="src/imagens/ps4-logo.png" alt="logo playstation 4">
+                            </li>
+
+
+                            <li>
+                                utm (para Apple)<img src="src/imagens/windows-logo.png" alt="logo windows">
+                            </li>
+                        </ul>
+                    </button>
+                </div>
+            </div>
+
+            <div class="cartao">
+                <img class="imagem" src="src/imagem/produtos/maltego.png">
+                <div class="informacoes">
+                    <h3 class="titulo">AP 1350 ac</h3>
+                    <p class="texto"> O Ap 1350 ac é um dos produtos da intelbras que tem um dos
+                        melhores resultados
+                        quanto a velocidade da internet e com um novo sistema de segurança que a
+                        Vanguard proporciona.
+                    </p>
+
+
+                    <button class="btn-plataforma">
+                        <ul class="plataformas">
+                            <li>
+                                <a href="https://deb.parrot.sh/parrot/iso/6.0/Parrot-security-6.0_amd64.iso"
+                                    class="opcao">iso(amd64)</a>
+                            </li>
+
+                            <li>
+                                <a href="https://deb.parrot.sh/parrot/iso/5.3/Parrot-security-5.3_amd64.ova"></a>
+                                virtualbox(amd64)<img src="src/imagens/ps4-logo.png" alt="logo playstation 4">
+                            </li>
+
+
+                            <li>
+                                utm (para Apple)<img src="src/imagens/windows-logo.png" alt="logo windows">
+                            </li>
+                        </ul>
+                    </button>
+                </div>
+            </div>
+
+            <div class="cartao">
+                <img class="imagem" src="src/imagem/produtos/metasploit.png">
+                <div class="informacoes">
+                    <h3 class="titulo">AP 1350 ac</h3>
+                    <p class="texto"> O Ap 1350 ac é um dos produtos da intelbras que tem um dos
+                        melhores resultados
+                        quanto a velocidade da internet e com um novo sistema de segurança que a
+                        Vanguard proporciona.
+                    </p>
+
+
+                    <button class="btn-plataforma">
+                        <ul class="plataformas">
+                            <li>
+                                <a href="https://deb.parrot.sh/parrot/iso/6.0/Parrot-security-6.0_amd64.iso"
+                                    class="opcao">iso(amd64)</a>
+                            </li>
+
+                            <li>
+                                <a href="https://deb.parrot.sh/parrot/iso/5.3/Parrot-security-5.3_amd64.ova"></a>
+                                virtualbox(amd64)<img src="src/imagens/ps4-logo.png" alt="logo playstation 4">
+                            </li>
+
+
+                            <li>
+                                utm (para Apple)<img src="src/imagens/windows-logo.png" alt="logo windows">
+                            </li>
+                        </ul>
+                    </button>
+                </div>
+            </div>
+
+        </div>
+        <h1 class="titulo"> Vpns</h1>
+        <!--outro produto-->
+        <div class="lista">
             <div class="cartao" id="cameras">
 
-                <img class="imagem" src="src/imagem/produtos/camera1-Photoroom.png-Photoroom.png">
-
+                <img class="imagem" src="src/imagem/produtos/burp-suite.png">
                 <div class="informacoes">
 
                     <h3 class="titulo">AP 1350 ac</h3>
-                    <p class="texto"> O Ap 1350 ac é um dos produtos da intelbras que tem um dos melhores resultados
-                        quanto a velocidade da internet e com um novo sistema de segurança que a Vanguard proporciona.
+                    <p class="texto"> O Ap 1350 ac é um dos produtos da intelbras que tem um dos
+                        melhores resultados
+                        quanto a velocidade da internet e com um novo sistema de segurança que a
+                        Vanguard proporciona.
                     </p>
 
 
                     <button class="btn-plataforma">
                         <a href="pagamento.html" target="_blank">Compre já</a>
                     </button>
-                </div>
-            </div>
-            <!--outro produto-->
-            <div class="cartao">
-
-                <img class="imagem" src="src/imagem/produtos/camera360g-Photoroom.png">
-
-                <div class="informacoes">
-
-                    <h3 class="titulo">AP 1350 ac</h3>
-                    <p class="texto"> O Ap 1350 ac é um dos produtos da intelbras que tem um dos melhores resultados
-                        quanto a velocidade da internet e com um novo sistema de segurança que a Vanguard proporciona.
-                    </p>
-
-
-                    <button class="btn-plataforma">
-                        <a href="pagamento.html" target="_blank">Compre já</a>
+                    <button class="btn-carrinho">
+                        <a href="carrinho.html">
+                            <img src="src/imagem/icones/carrinho-de-compras.png" class="carrinho">
+                        </a>
                     </button>
                 </div>
             </div>
+
             <!--outro produto-->
+
+            <h1 class="titulo"> Vpns</h1>
+
             <div class="cartao" id="fechaduras">
-
-                <img class="imagem" src="src/imagem/produtos/fechaduraFR101-Photoroom.png-Photoroom.png">
-
+                <img class="imagem" src="src/imagem/produtos/fechaduraFR101.png">
                 <div class="informacoes">
 
                     <h3 class="titulo">AP 1350 ac</h3>
-                    <p class="texto"> O Ap 1350 ac é um dos produtos da intelbras que tem um dos melhores resultados
-                        quanto a velocidade da internet e com um novo sistema de segurança que a Vanguard proporciona.
+                    <p class="texto"> O Ap 1350 ac é um dos produtos da intelbras que tem um dos
+                        melhores resultados
+                        quanto a velocidade da internet e com um novo sistema de segurança que a
+                        Vanguard proporciona.
                     </p>
 
 
                     <button class="btn-plataforma">
                         <a href="pagamento.html" target="_blank">Compre já</a>
+                    </button>
+                    <button class="btn-carrinho">
+                        <a href="carrinho.html">
+                            <img src="src/imagem/icones/carrinho-de-compras.png" class="carrinho">
+                        </a>
                     </button>
                 </div>
             </div>
             <!--outro produto-->
             <div class="cartao">
-
-                <img class="imagem" src="src/imagem/produtos/fechaduraFR330-Photoroom.png-Photoroom.png">
-
+                <img class="imagem" src="src/imagem/produtos/fechaduraFR330.png">
                 <div class="informacoes">
 
                     <h3 class="titulo">AP 1350 ac</h3>
-                    <p class="texto"> O Ap 1350 ac é um dos produtos da intelbras que tem um dos melhores resultados
-                        quanto a velocidade da internet e com um novo sistema de segurança que a Vanguard proporciona.
+                    <p class="texto"> O Ap 1350 ac é um dos produtos da intelbras que tem um dos
+                        melhores resultados
+                        quanto a velocidade da internet e com um novo sistema de segurança que a
+                        Vanguard proporciona.
                     </p>
 
 
                     <button class="btn-plataforma">
                         <a href="pagamento.html" target="_blank">Compre já</a>
                     </button>
-                </div>
-            </div>
-
-            <!--outro produto-->
-            <div class="cartao" id="roteadores">
-
-                <img class="imagem" src="src/imagem/produtos/roteadorActionRF1200png-Photoroom.png-Photoroom.png">
-
-                <div class="informacoes">
-
-                    <h3 class="titulo">AP 1350 ac</h3>
-                    <p class="texto"> O Ap 1350 ac é um dos produtos da intelbras que tem um dos melhores resultados
-                        quanto a velocidade da internet e com um novo sistema de segurança que a Vanguard proporciona.
-                    </p>
-
-
-                    <button class="btn-plataforma">
-                        <a href="pagamento.html" target="_blank">Compre já</a>
+                    <button class="btn-carrinho">
+                        <a href="carrinho.html">
+                            <img src="src/imagem/icones/carrinho-de-compras.png" class="carrinho">
+                        </a>
                     </button>
                 </div>
             </div>
-            <!--outro produto-->
-            <div class="cartao">
+        </div>
+        <!--outro produto-->
+        <div class="cartao" id="roteadores">
+            <img class="imagem" src="src/imagem/produtos/roteadorActionRF1200.png">
+            <div class="informacoes">
 
-                <img class="imagem" src="src/imagem/produtos/roteadorRF301k-Photoroom.png-Photoroom.png">
-
-                <div class="informacoes">
-
-                    <h3 class="titulo">AP 1350 ac</h3>
-                    <p class="texto"> O Ap 1350 ac é um dos produtos da intelbras que tem um dos melhores resultados
-                        quanto a velocidade da internet e com um novo sistema de segurança que a Vanguard proporciona.
-                    </p>
+                <h3 class="titulo">AP 1350 ac</h3>
+                <p class="texto"> O Ap 1350 ac é um dos produtos da intelbras que tem um dos
+                    melhores resultados
+                    quanto a velocidade da internet e com um novo sistema de segurança que a
+                    Vanguard proporciona.
+                </p>
 
 
-                    <button class="btn-plataforma">
-                        <a href="pagamento.html" target="_blank">Compre já</a>
-                    </button>
-                </div>
+                <button class="btn-plataforma">
+                    <a href="pagamento.html" target="_blank">Compre já</a>
+                </button>
+                <button class="btn-carrinho">
+                    <a href="carrinho.html">
+                        <img src="src/imagem/icones/carrinho-de-compras.png" class="carrinho">
+                    </a>
+                </button>
             </div>
+        </div>
+        <!--outro produto-->
+        <div class="cartao">
+            <img class="imagem" src="src/imagem/produtos/roteadorRF301k.png">
+            <div class="informacoes">
+
+                <h3 class="titulo">AP 1350 ac</h3>
+                <p class="texto"> O Ap 1350 ac é um dos produtos da intelbras que tem um dos
+                    melhores resultados
+                    quanto a velocidade da internet e com um novo sistema de segurança que a
+                    Vanguard proporciona.
+                </p>
+
+
+                <button class="btn-plataforma">
+                    <a href="pagamento.html" target="_blank">Compre já</a>
+                </button>
+                <button class="btn-carrinho">
+                    <a href="carrinho.html">
+                        <img src="src/imagem/icones/carrinho-de-compras.png" class="carrinho">
+                    </a>
+                </button>
+            </div>
+        </div>
+
+
+
+        <div class="cartao">
+            <img class="imagem" src="src/imagem/produtos/burp-suite.png">
+            <div class="informacoes">
+
+                <h3 class="titulo">AP 1350 ac</h3>
+                <p class="texto"> O Ap 1350 ac é um dos produtos da intelbras que tem um dos
+                    melhores resultados
+                    quanto a velocidade da internet e com um novo sistema de segurança que a
+                    Vanguard proporciona.
+                </p>
+
+
+                <button class="btn-plataforma">
+                    <a href="pagamento.html" target="_blank">Compre já</a>
+                </button>
+                <button class="btn-carrinho">
+                    <a href="carrinho.html">
+                        <img src="src/imagem/icones/carrinho-de-compras.png" class="carrinho">
+                    </a>
+                </button>
+
+                <button class="next" onclick="nextSlide()">&#10095;</button>
+            </div>
+
+        </div>
 
     </section>
 
@@ -317,6 +638,11 @@
     <script src="src/js/index.js"></script>
     <script src="src/js/slide.js"></script>
     <script src="src/js/botoes.js"></script>
+    <script src="src/js/troca_produto_imagem.js"></script>
+    <script src="src/js/vitrine.js"></script>
 </body>
+
+
+<!--Precisa alterar as flechas adicionando isso "onclick="nextSlide(this) e prevSlide(this)"-->
 
 </html>
